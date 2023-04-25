@@ -9,8 +9,8 @@
 
 
     <node pkg="aruco_ros" type="single" name="aruco_single">
-        <remap from="/camera_info" to="/stereo/$(arg eye)/camera_info" />
-        <remap from="/image" to="/stereo/$(arg eye)/image_rect_color" />
+        <remap from="/zed2/zed_node/rgb/camera_info" to="/stereo/$(arg eye)/camera_info" />
+        <remap from="/zed2/zed_node/rgb/image_rect_color" to="/stereo/$(arg eye)/image_rect_color" />
         <param name="image_is_rectified" value="True"/>
         <param name="marker_size"        value="$(arg markerSize)"/>
         <param name="marker_id"          value="$(arg markerId)"/>

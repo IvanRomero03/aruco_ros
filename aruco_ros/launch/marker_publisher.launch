@@ -6,8 +6,8 @@
 
 
     <node pkg="aruco_ros" type="marker_publisher" name="aruco_marker_publisher">
-        <remap from="/camera_info" to="/cameras/$(arg side)_hand_camera/camera_info" />
-        <remap from="/image" to="/cameras/$(arg side)_hand_camera/image" />
+        <remap from="/zed2/zed_node/rgb/camera_info" to="/stereo/$(arg eye)/camera_info" />
+        <remap from="/zed2/zed_node/rgb/image_rect_color" to="/stereo/$(arg eye)/image_rect_color" />
         <param name="image_is_rectified" value="True"/>
         <param name="marker_size"        value="$(arg markerSize)"/>
         <param name="reference_frame"    value="$(arg ref_frame)"/>   <!-- frame in which the marker pose will be refered -->
